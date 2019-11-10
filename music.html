@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Meditaion App</title>
+  </head>
+  <body>
+    <ul>
+      <li class="zero"><a href = "./index.html"><img src="./svg/home.svg" alt="home" class="home"/></a></li>
+      <li class="one"><a href = "./earth.html"><img src="./svg/earth.svg" alt="earth" class="earth"/></a></li>
+      <li class="two"><a href = "./fire.html"><img src="./svg/fire.svg" alt="fire"class="fire"/></a></li>
+      <li class="three"><a href = "./water.html"><img src="./svg/water.svg" alt="water" class="water"/></a></li>
+      <li class="four"><a href = "./music.html"><img src="./svg/music.svg" alt="music" class="music"/></a></li>
+    </ul>
+<!-- We want to have three sections, one for where the minutes are, another with the play botton
+and the other where we choose the difrent sounds and videos  -->
+<!--ATTENSION, i just realised that i need to loop the sound for 10 minutes -->
+  <div class="app">
+    <!-- Creating a container for the videos  -->
+    <div class="vid-container">
+      <video loop>
+        <source src="./video/pianodog.mp4" type="video/mp4">
+      </video>
+    </div>
+  <!-- Creating a container for the time buttons  -->
+    <div class="time-select">
+      <button data-time="120">2 minutes</button>
+      <button data-time="300">5 minutes</button>
+      <button data-time="600">10 minutes</button>
+    </div>
+    <div class="player-container">
+      <audio class="song">
+        <source src="./sound/piano.m4a">
+      </audio>
+      <img src="./svg/play-button.svg" alt="play" class="play"></img>
+      <svg width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="track-outline">
+      <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+      </svg>
+      <svg width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg" class="moving-outline">
+      <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+      </svg>
+      <h3 class="time-display">0:00</h3>
+    </div>
+
+    <div class="sound-picker">
+      <button data-sound="./sound/piano.m4a" data-video="./video/pianodog.mp4">
+        <img src="./svg/piano.svg" alt="piano">
+      </button>
+      <button data-sound="./sound/japan.m4a" data-video="./video/japan.mp4">
+        <img src="./svg/japan.svg" alt="japan">
+      </button>
+
+    </div>
+  </div>
+
+
+    <script src="./app.js"></script>
+  </body>
+</html>
